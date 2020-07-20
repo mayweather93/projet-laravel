@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('job_id')->index('users_job_id_foreign');
+            $table->unsignedBigInteger('job_id')->default('2')->index('users_job_id_foreign');
             $table->rememberToken();
             $table->timestamps();
            // DB::statement('SET FOREIGN_KEY_CHECKS=0;');

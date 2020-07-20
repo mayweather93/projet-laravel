@@ -19,5 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/products/search', 'ProductController@search')->name('products.search');
+Route::resource('products', 'ProductController');
+Route::resource('orders', 'OrderController')->middleware('auth');
 Route::post('billing', 'BillingController@index')->name('billing');

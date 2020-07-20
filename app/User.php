@@ -40,6 +40,11 @@ class User extends Authenticatable
     ];
     
     public function job() {
-        return $this->belongTo('App\Job');
+        return $this->hasOne(Job::class,'user_id');
     }
+    public function shop()
+    {
+        return $this->hasOne(Shop::class, 'user_id');
+    }
+
 }
