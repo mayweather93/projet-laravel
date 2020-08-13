@@ -1,5 +1,6 @@
 <div class="col-4">
     <div class="product-wrapper product-border mb-24">
+    <h1>test</h1>
         <div class="img">
             <a href="{{route('products.show', $product)}}">
                 @if(!empty($product->cover_img))
